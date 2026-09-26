@@ -1,18 +1,24 @@
 ---
+layout: "../layouts/MainLayout.astro"
+title: "Home"
 
+import Header from "../components/Header.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-		Okay look I made changes to the index please rebuild this shit please i beg of you....,PLEASEEEE
-	</body>
-</html>
+<MainLayout title="Home">
+    <h1>Hello!</h1>
+    <p>Hi, welcome to Sev's Stuf! This is a place for me to share all of my work, no matter how big or how small.</p>
+    <ul>
+       <li>If you'd like to find out who Sev is, you can check out my <a href="/bio.html">Bio.</a></li>
+       <li>If you'd like to find out what Sev does, you can check out my portfolio.</li>
+       <li>If you'd like to find out what Sev thinks, you can check out my blog.</li>
+       <li>If you'd like to find out how Sev judges, you can check out my <a href="/reviews.html">Reviews.</a></li>
+    </ul>
+
+    <h1>What's new?</h1>
+    <ul>
+       <li>Refurbished the site completely!</li>
+       <li>Added Review, Bio, and Portfolio pages.</li>
+    </ul>
+</MainLayout>
