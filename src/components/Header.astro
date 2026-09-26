@@ -1,34 +1,50 @@
 ---
 import { Image } from 'astro:assets';
-import headerLeft from '../assets/HeaderLeft.png';
+
+import HomeButton from "../assets/HomeButton.png";
+import BioButton from "../assets/BioButton.png";
+import PortfolioButton from "../assets/PortfolioButton.png";
+import BlogButton from "../assets/BlogButton.png";
+import ReviewsButton from "../assets/ReviewsButton.png";
+
+import HeaderLeft from "../assets/HeaderLeft.png";
+import HeaderCenter from "../assets/HeaderCenter.png";
+import HeaderRight from "../assets/HeaderRight.png";
+
+import BlueskyButton from "../assets/BlueskyButton.png";
+import TwitterButton from "../assets/TwitterButton.png";
+import DiscordButton from "../assets/DiscordButton.png";
+import TwitchButton from "../assets/TwitchButton.png";
+import YoutubeButton from "../assets/YoutubeButton.png";
+import GithubButton from "../assets/GithubButton.png";
 ---
 
 
 <header>
     <nav id="header-left">
         <nav id="nav-buttons">
-            <a href="/"><img class="nav-button" src="src/assets/HomeButton.png"></a>
-            <a href="/"><img class="nav-button" src="src/assets/BioButton.png"></a>
-            <a href="/"><img class="nav-button" src="src/assets/PortfolioButton.png"></a>
-            <a href="/"><img class="nav-button" src="src/assets/BlogButton.png"></a>
-            <a href="/"><img class="nav-button" src="src/assets/ReviewsButton.png"></a>
+            <a href="/"><Image src={HomeButton} class="nav-button" alt="" /></a>
+            <a href="/"><Image src={BioButton} class="nav-button" alt="" /></a>
+            <a href="/"><Image src={PortfolioButton} class="nav-button" alt="" /></a>
+            <a href="/"><Image src={BlogButton} class="nav-button" alt="" /></a>
+            <a href="/"><Image src={ReviewsButton} class="nav-button" alt="" /></a>
         </nav>
-        <Image src={headerLeft} alt="" id="left-image" />
+        <Image src={HeaderLeft} alt="" id="left-image" />
     </nav>
 
-    <img id="header-center" src="src/assets/HeaderCenter.png">
+    <Image alt="" id="header-center" src={HeaderCenter} />
       
     <div id="header-right">
         <div id="socials-text">My socials:</div>
         <nav id="socials">
-            <a href="https://bsky.app/profile/sevsstuf.bsky.social"><img class="social-image" src="/src/assets/BlueskyButton.png"></a>
-            <a href="https://x.com/sevrgpro"><img class="social-button-image" src="src/assets/TwitterButton.png"></a>
-            <a href="https://discord.gg/N7y2wt7P3m"><img class="social-button-image" src="src/assets/DiscordButton.png"></a>
-            <a href="https://www.twitch.tv/sevsstuf"><img class="social-button-image" src="src/assets/TwitchButton.png"></a>
-            <a href="https://www.youtube.com/@Sevrgpro"><img class="social-button-image" src="src/assets/YoutubeButton.png"></a>
-            <a href="https://github.com/SevsStuf/"><img class="social-button-image" src="src/assets/GithubButton.png"></a>
+            <a href="https://bsky.app/profile/sevsstuf.bsky.social"><Image src={BlueskyButton} class="social-button-image" alt="" /></a>
+            <a href="https://x.com/sevrgpro"><Image src={TwitterButton} class="social-button-image" alt="" /></a>
+            <a href="https://discord.gg/N7y2wt7P3m"><Image src={DiscordButton} class="social-button-image" alt="" /></a>
+            <a href="https://www.twitch.tv/sevsstuf"><Image src={TwitchButton} class="social-button-image" alt="" /></a>
+            <a href="https://www.youtube.com/@Sevrgpro"><Image src={YoutubeButton} class="social-button-image" alt="" /></a>
+            <a href="https://github.com/SevsStuf/"><Image src={GithubButton} class="social-button-image" alt="" /></a>
         </nav>
-        <img id="right-image" src="src/assets/HeaderRight.png">
+        <Image alt="" id="right-image" src={HeaderRight} />
     </div>
 </header>
 
