@@ -1,4 +1,5 @@
 ---
+const GENPATH = import.meta.env.BASE_URL + "/";
 ---
 
 
@@ -11,7 +12,7 @@
             <a href="/"><img class="nav-button" src="src/assets/BlogButton.png"></a>
             <a href="/"><img class="nav-button" src="src/assets/ReviewsButton.png"></a>
         </nav>
-        <img id="left-image" src="src/assets/HeaderLeft.png">
+        <img id="left-image" src={GENPATH + "src/assets/HeaderLeft.png"}>
     </nav>
 
     <img id="header-center" src="src/assets/HeaderCenter.png">
