@@ -1,58 +1,44 @@
 ---
-import { Image } from 'astro:assets';
-
-import HomeButton from "../assets/HomeButton.png";
-import BioButton from "../assets/BioButton.png";
-import PortfolioButton from "../assets/PortfolioButton.png";
-import BlogButton from "../assets/BlogButton.png";
-import ReviewsButton from "../assets/ReviewsButton.png";
-
-import HeaderLeft from "../assets/HeaderLeft.png";
-import HeaderCenter from "../assets/HeaderCenter.png";
-import HeaderRight from "../assets/HeaderRight.png";
-
-import BlueskyButton from "../assets/BlueskyButton.png";
-import TwitterButton from "../assets/TwitterButton.png";
-import DiscordButton from "../assets/DiscordButton.png";
-import TwitchButton from "../assets/TwitchButton.png";
-import YoutubeButton from "../assets/YoutubeButton.png";
-import GithubButton from "../assets/GithubButton.png";
+const BlueskyLink = "https://bsky.app/profile/sevsstuf.bsky.social"
+const TwitterLink = "https://x.com/sevrgpro"
+const DiscordLink = "https://discord.gg/N7y2wt7P3m"
+const TwitchLink = "https://www.twitch.tv/sevsstuf"
+const YoutubeLink = "https://www.youtube.com/@Sevrgpro"
+const GithubLink = "https://github.com/SevsStuf/"
 ---
 
 
 <header>
     <nav id="header-left">
         <nav id="nav-buttons">
-            <a href="/"><Image src={HomeButton} class="nav-button" alt="" /></a>
-            <a href="/"><Image src={BioButton} class="nav-button" alt="" /></a>
-            <a href="/"><Image src={PortfolioButton} class="nav-button" alt="" /></a>
-            <a href="/"><Image src={BlogButton} class="nav-button" alt="" /></a>
-            <a href="/"><Image src={ReviewsButton} class="nav-button" alt="" /></a>
+            <a href="/"><img src="/HomeButton.png" class="nav-button"></a>
+            <a href="/"><img src="/BioButton.png" class="nav-button"></a>
+            <a href="/"><img src="/PortfolioButton.png" class="nav-button"></a>
+            <a href="/"><img src="/BlogButton.png" class="nav-button"></a>
+            <a href="/"><img src="/ReviewsButton.png" class="nav-button"></a>
         </nav>
-        <Image src={HeaderLeft} alt="" id="left-image" />
+        <img src="/HeaderLeft.png" id="left-image">
     </nav>
 
-    <Image alt="" id="header-center" src={HeaderCenter} />
+    <img id="header-center" src="/HeaderCenter.png">
       
     <div id="header-right">
         <div id="socials-text">My socials:</div>
         <nav id="socials">
-            <a href="https://bsky.app/profile/sevsstuf.bsky.social"><Image src={BlueskyButton} class="social-button-image" alt="" /></a>
-            <a href="https://x.com/sevrgpro"><Image src={TwitterButton} class="social-button-image" alt="" /></a>
-            <a href="https://discord.gg/N7y2wt7P3m"><Image src={DiscordButton} class="social-button-image" alt="" /></a>
-            <a href="https://www.twitch.tv/sevsstuf"><Image src={TwitchButton} class="social-button-image" alt="" /></a>
-            <a href="https://www.youtube.com/@Sevrgpro"><Image src={YoutubeButton} class="social-button-image" alt="" /></a>
-            <a href="https://github.com/SevsStuf/"><Image src={GithubButton} class="social-button-image" alt="" /></a>
+            <a href={BlueskyLink}><img src="/BlueskyButton.png" class="social-button-image"></a>
+            <a href={TwitterLink}><img src="/TwitterButton.png" class="social-button-image"></a>
+            <a href={DiscordLink}><img src="/DiscordButton.png" class="social-button-image"></a>
+            <a href={TwitchLink}><img src="/TwitchButton.png" class="social-button-image"></a>
+            <a href={YoutubeLink}><img src="/YoutubeButton.png"} class="social-button-image"></a>
+            <a href={GithubLink}><img src="/GithubButton.png" class="social-button-image"></a>
         </nav>
-        <Image alt="" id="right-image" src={HeaderRight} />
+        <img id="right-image" src="/HeaderRight.png">
     </div>
 </header>
 
 <style>
     header {
         display: flex;
-        height: 74px;
-        max-width: 100vw;
     }
 
 
@@ -65,12 +51,6 @@ import GithubButton from "../assets/GithubButton.png";
         padding-left: 11px;
         gap: 19.3px;
     }
-    .nav-button {
-        display: block;
-    }
-    #left-image {
-        display: block;
-    }
 
 
 
@@ -80,7 +60,9 @@ import GithubButton from "../assets/GithubButton.png";
     }
 
 
-
+    img {
+        display: block;
+    }
 
     #socials {
         position: absolute;
@@ -95,11 +77,5 @@ import GithubButton from "../assets/GithubButton.png";
         right: 320px;
         margin-top: 5px;
         font-size: 30px;
-    }
-    .social-button-image {
-        display: block;
-    }
-    #right-image {
-        display: block;
     }
 </style>

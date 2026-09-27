@@ -7,6 +7,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Home">
+   <div id="margin-container">
     <h1>Hello!</h1>
     <p>Hi, welcome to Sev's Stuf! This is a place for me to share all of my work, no matter how big or how small.</p>
     <ul>
@@ -21,4 +22,14 @@ import MainLayout from "../layouts/MainLayout.astro";
        <li>Refurbished the site completely!</li>
        <li>Added Review, Bio, and Portfolio pages.</li>
     </ul>
+   </div>
+
+   <style>
+   #margin-container {
+      margin: 30px;
+      background-color: #3a1e5c;
+      flex-grow: 1;
+   }
+   </style>
 </MainLayout>
+
